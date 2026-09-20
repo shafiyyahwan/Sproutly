@@ -1,16 +1,23 @@
-# flutter_application_1
+# Sproutly: Smart Gardening Companion
 
-A new Flutter project.
+Sproutly is a smart gardening companion app designed to help users manage and care for their plants based on their gardening experience level.
 
-## Getting Started
+The app provides personalised gardening guidance through different gardener personas, making it easier for users to understand what their plants need and build better gardening habits.
 
-This project is a starting point for a Flutter application.
+# Gardener Personas
 
-A few resources to get you started if this is your first Flutter project:
+Sproutly offers personalised experiences for different types of gardeners:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Beginner: Basic plant care guidance and simple gardening plans.
+- Intermediate: More detailed care recommendations for hobbyist gardeners.
+- Advanced: Tools for managing multiple plots, crops, and gardening tasks for commercial purposes.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# UI/UX Prototype
+
+The initial Sproutly interface was designed and prototyped in Figma.
+
+Figma Prototype:
+[View Sproutly Prototype](https://www.figma.com/proto/yiCvX5zHjgOiaomtDN8BX6/Sproutly-Hi-Fi?node-id=2004-356&p=f&viewport=1964%2C1184%2C0.75&t=P1DFiObd5mxuzdGX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2004%3A306&show-proto-sidebar=1&page-id=0%3A1)
+
+The Figma prototype serves as the initial UI/UX design, while this repository contains the ongoing development of the actual Flutter application based on the prototype.
+
