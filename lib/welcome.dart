@@ -1,3 +1,4 @@
+import 'register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,11 +18,9 @@ class SproutlyScreen extends StatelessWidget {
           height: 852,
           child: Stack(
             children: [
-
               // =========================
               // BACKGROUND
               // =========================
-
               Container(
                 width: 393,
                 height: 852,
@@ -31,7 +30,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // BROWN SOIL
               // =========================
-
               Positioned(
                 left: -319,
                 top: 688,
@@ -40,10 +38,7 @@ class SproutlyScreen extends StatelessWidget {
                   height: 242,
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [
-                        Color(0xFFA97445),
-                        Color(0xFF8B5E34),
-                      ],
+                      colors: [Color(0xFFA97445), Color(0xFF8B5E34)],
                     ),
                     shape: BoxShape.rectangle,
                   ),
@@ -53,7 +48,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // TREE
               // =========================
-
               Positioned(
                 left: 90,
                 top: 490,
@@ -70,57 +64,53 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // LOGO
               // =========================
-
               Positioned(
-                left: 135,
-                top: 105,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-
-                    const Text(
-                      'sprou',
-                      style: TextStyle(
-                        color: Color(0xFF113B28),
-                        fontSize: 25,
-                        fontFamily: 'Quicksand',
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.25,
-                      ),
-                    ),
-
-                    // Sprout symbol
-                    Transform.translate(
-                      offset: const Offset(0, -3),
-                      child: SizedBox(
-                        width: 30,
-                        height: 35,
-                        child: SvgPicture.asset(
-                          'lib/assets/images/sproutly.svg',
-                          fit: BoxFit.contain,
+                  left: 135,
+                  top: 105,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'sprou',
+                        style: GoogleFonts.quicksand(
+                          color: const Color(0xFF113B28),
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.25,
                         ),
                       ),
-                    ),
 
-                    const Text(
-                      'ly',
-                      style: TextStyle(
-                        color: Color(0xFF113B28),
-                        fontSize: 25,
-                        fontFamily: 'Quicksand',
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.25,
+                      // Your actual SVG.
+                      // Transparent background.
+                      Transform.translate(
+                        offset: const Offset(0, -3),
+                        child: SizedBox(
+                          width: 30,
+                          height: 35,
+                          child: SvgPicture.asset(
+                            'lib/assets/images/sproutly.svg',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+
+                      Text(
+                        'ly',
+                        style: GoogleFonts.quicksand(
+                          color: const Color(0xFF113B28),
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.25,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
 
               // =========================
               // MAIN TITLE
               // =========================
-
               Positioned(
                 left: 67,
                 top: 185,
@@ -153,7 +143,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // DESCRIPTION
               // =========================
-
               Positioned(
                 left: 41,
                 top: 278,
@@ -173,7 +162,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // TRACK GROWTH
               // =========================
-
               Positioned(
                 left: 61,
                 top: 356,
@@ -208,7 +196,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // SMART REMINDERS
               // =========================
-
               Positioned(
                 left: 279,
                 top: 343,
@@ -243,7 +230,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // AI DISEASE SCAN
               // =========================
-
               Positioned(
                 left: 45,
                 top: 565,
@@ -278,7 +264,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // COMMUNITY SUPPORT
               // =========================
-
               Positioned(
                 left: 297,
                 top: 562,
@@ -313,30 +298,39 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // GET STARTED BUTTON
               // =========================
-
               Positioned(
                 left: 64,
                 top: 730,
-                child: Container(
-                  width: 266,
-                  height: 45,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color(0xFFDDE796),
-                        Color(0xFFCDDD7E),
-                        Color(0xFFBED367),
-                      ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 266,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color(0xFFDDE796),
+                          Color(0xFFCDDD7E),
+                          Color(0xFFBED367),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Get Started',
-                      style: GoogleFonts.quicksand(
-                        color: const Color(0xFF31543C),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
+                    child: Center(
+                      child: Text(
+                        'Get Started',
+                        style: GoogleFonts.quicksand(
+                          color: const Color(0xFF31543C),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),
@@ -346,7 +340,6 @@ class SproutlyScreen extends StatelessWidget {
               // =========================
               // SIGN IN
               // =========================
-
               Positioned(
                 left: 101,
                 top: 793,

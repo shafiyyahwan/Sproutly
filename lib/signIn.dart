@@ -1,7 +1,9 @@
-
+import 'register.dart';
+import 'home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/gestures.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -16,16 +18,12 @@ class SignInPage extends StatelessWidget {
             width: 393,
             height: 852,
             clipBehavior: Clip.antiAlias,
-            decoration: const BoxDecoration(
-              color: Color(0xFFF8F6EE),
-            ),
+            decoration: const BoxDecoration(color: Color(0xFFF8F6EE)),
             child: Stack(
               children: [
-
                 // ============================================
                 // MAIN LIGHT GREEN CARD
                 // ============================================
-
                 Positioned(
                   left: 40,
                   top: 174,
@@ -43,7 +41,6 @@ class SignInPage extends StatelessWidget {
                 // LOGO
                 // sprou + SVG + ly
                 // ============================================
-
                 Positioned(
                   left: 135,
                   top: 105,
@@ -51,7 +48,6 @@ class SignInPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-
                       Text(
                         'sprou',
                         style: GoogleFonts.quicksand(
@@ -92,7 +88,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // SMALL ICON ABOVE TITLE
                 // ============================================
-
                 const Positioned(
                   left: 177,
                   top: 204,
@@ -106,7 +101,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // WELCOME BACK
                 // ============================================
-
                 Positioned(
                   left: 105,
                   top: 238,
@@ -125,7 +119,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // SUBTITLE
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 268,
@@ -144,7 +137,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // EMAIL LABEL
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 318,
@@ -161,7 +153,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // EMAIL FIELD
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 338,
@@ -222,7 +213,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // PASSWORD LABEL
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 393,
@@ -239,7 +229,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // PASSWORD FIELD
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 414,
@@ -300,7 +289,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // FORGOT PASSWORD
                 // ============================================
-
                 Positioned(
                   left: 241,
                   top: 465,
@@ -323,13 +311,17 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // SIGN IN BUTTON
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 500,
                   child: GestureDetector(
                     onTap: () {
-                      // Add actual authentication later.
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                      );
                     },
                     child: Container(
                       width: 263,
@@ -338,10 +330,7 @@ class SignInPage extends StatelessWidget {
                         gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0xFFDDE796),
-                            Color(0xFFBED367),
-                          ],
+                          colors: [Color(0xFFDDE796), Color(0xFFBED367)],
                         ),
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -371,7 +360,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // OR CONTINUE WITH
                 // ============================================
-
                 Positioned(
                   left: 141,
                   top: 558,
@@ -412,7 +400,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // GOOGLE BUTTON
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 585,
@@ -447,7 +434,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // FACEBOOK BUTTON
                 // ============================================
-
                 Positioned(
                   left: 202,
                   top: 585,
@@ -483,7 +469,6 @@ class SignInPage extends StatelessWidget {
                 // ============================================
                 // CREATE ACCOUNT
                 // ============================================
-
                 Positioned(
                   left: 65,
                   top: 680,
@@ -507,6 +492,15 @@ class SignInPage extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             decoration: TextDecoration.underline,
                           ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterPage(),
+                                ),
+                              );
+                            },
                         ),
                       ],
                     ),
