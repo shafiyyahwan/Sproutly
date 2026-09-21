@@ -17,7 +17,7 @@ Sproutly offers personalised experiences for different types of gardeners:
 The initial Sproutly interface was designed and prototyped in Figma.
 
 Figma Prototype:
-[View Sproutly Prototype](https://www.figma.com/proto/yiCvX5zHjgOiaomtDN8BX6/Sproutly-Hi-Fi?node-id=2004-356&p=f&viewport=1964%2C1184%2C0.75&t=P1DFiObd5mxuzdGX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2004%3A306&show-proto-sidebar=1&page-id=0%3A1)
+[View Sproutly Prototype](https://www.figma.com/proto/yiCvX5zHjgOiaomtDN8BX6/Sproutly-Hi-Fi?node-id=2004-306&p=f&viewport=1964%2C1184%2C0.75&t=Fzp7to2p6ILQpb2V-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2004%3A306&show-proto-sidebar=1&page-id=0%3A1)
 
 The Figma prototype serves as the initial UI/UX design, while this repository contains the ongoing development of the actual Flutter application based on the prototype.
 
